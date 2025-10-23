@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git credentialsId: 'Smitha_test_token_for_Jenkin_RWD', url: 'https://bitbucket.org/smitha_bitbucket/playwrightjavaproject.git'
+        git credentialsId: 'Smitha_test_token_for_Jenkin_RWD', url: 'https://smitha_bitbucket-admin@bitbucket.org/smitha_bitbucket/playwrightjavaproject.git'
       }
     }
     stage('Build') {
