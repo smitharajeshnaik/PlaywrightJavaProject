@@ -1,6 +1,7 @@
 pipeline {
     agent any
     tools {
+        jdk 'JDK21'   
         maven 'Maven_3.9.11' // Use the exact name from Jenkins config
     }
 
@@ -16,7 +17,8 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean install'
+		bat 'java -version'
+	        bat 'mvn clean install'
             }
         }
 
