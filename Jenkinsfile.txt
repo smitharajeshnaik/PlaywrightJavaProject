@@ -24,7 +24,9 @@ pipeline {
 
         stage('Run Playwright Tests') {
             steps {
-                bat 'mvn test'
+               // bat 'mvn test'
+               bat 'xvfb-run --auto-servernum mvn test'  //to run that whether browser will come or not
+
             }
         }
     }
