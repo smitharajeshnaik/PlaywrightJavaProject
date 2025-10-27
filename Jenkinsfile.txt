@@ -1,20 +1,15 @@
-
 pipeline {
     agent any
 
     stages {
         stage('Launch Playwright Browser') {
             steps {
-                script {
-                    // Run your Java class that opens the browser
-                    //bat './mvnw exec:java -Dexec.mainClass="com.example.PlaywrightLauncher"'
-		    bat 'mvnw.cmd exec:java -Dexec.mainClass="com.example.PlaywrightLauncher"'
-
-                }
+                bat 'mvn exec:java -Dexec.mainClass="com.example.PlaywrightLauncher"'
             }
         }
     }
 }
+
 
 /*pipeline {
     agent any
