@@ -7,7 +7,9 @@ pipeline {
             steps {
                 script {
                     // Run your Java class that opens the browser
-                    bat './mvnw exec:java -Dexec.mainClass="com.example.PlaywrightLauncher"'
+                    //bat './mvnw exec:java -Dexec.mainClass="com.example.PlaywrightLauncher"'
+		    bat 'mvnw.cmd exec:java -Dexec.mainClass="com.example.PlaywrightLauncher"'
+
                 }
             }
         }
