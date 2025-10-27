@@ -1,4 +1,20 @@
+
 pipeline {
+    agent any
+
+    stages {
+        stage('Launch Playwright Browser') {
+            steps {
+                script {
+                    // Run your Java class that opens the browser
+                    bat './mvnw exec:java -Dexec.mainClass="com.example.PlaywrightLauncher"'
+                }
+            }
+        }
+    }
+}
+
+/*pipeline {
     agent any
     tools {
         jdk 'JDK21'   
@@ -27,14 +43,14 @@ pipeline {
        stage('Run Playwright Tests') {
            steps {
            //    bat 'mvn test'  //it will run all the program
-       	   	 bat 'mvn -Dtest=FirstTest -Dheadless=false test'
-	//	 bat 'mvn -Dtest=FirstTest test'
+       	//   	 bat 'mvn -Dtest=FirstTest -Dheadless=false test'
+		 bat 'mvn -Dtest=FirstTest test'
  
             }
        }
     }
    
-}  
+}   */
 
 //Below is used to check the integration between jenkin and bitbucket
 /*pipeline {
