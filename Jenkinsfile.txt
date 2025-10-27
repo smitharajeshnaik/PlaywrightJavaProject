@@ -1,26 +1,5 @@
+
 pipeline {
-    agent any
- tools {
-        jdk 'JDK21'   
-        maven 'Maven_3.9.11' // Use the exact name from Jenkins config
-    }
-
-
-    stages {
-        stage('Launch Playwright Browser') {
-            steps {
-       
-                bat 'mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="open https://amazon.com -b chromium"'
-
-            }
-        }
-    }
-}
-
-
-
-
-/*pipeline {
     agent any
     tools {
         jdk 'JDK21'   
@@ -56,7 +35,7 @@ pipeline {
        }
     }
    
-}   */
+}   
 
 //Below is used to check the integration between jenkin and bitbucket
 /*pipeline {
