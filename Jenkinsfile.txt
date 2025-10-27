@@ -9,9 +9,11 @@
         stage('Checkout') {
             steps {
                 git credentialsId: 'Smitha_test_token_for_Jenkin_RWD', 
-		//url: 'https://smitha_bitbucket-admin@bitbucket.org/smitha_bitbucket/playwrightjavaproject.git',
+		
+		//url: 'https://smitha_bitbucket-admin@bitbucket.org/smitha_bitbucket/playwrightjavaproject.git',   // bitbucket
+		url: 'https://github.com/smitharajeshnaik/PlaywrightJavaProject.git',    //github
+
         	branch: 'Smitha_bitbucket_test'
-https://github.com/smitharajeshnaik/PlaywrightJavaProject.git
             }
         }
 
@@ -22,19 +24,20 @@ https://github.com/smitharajeshnaik/PlaywrightJavaProject.git
             }
         }
 
-   //     stage('Run Playwright Tests') {
-  //          steps {
-           //    bat 'mvn test'  //it will run all the program
-       		 bat 'mvn -Dtest=FirstTest -Dheadless=false test'
-//
- //           }
-      //  }
+       stage('Run Playwright Tests') {
+           steps {
+               bat 'mvn test'  //it will run all the program
+       	   //	 bat 'mvn -Dtest=FirstTest -Dheadless=false test'
+		// bat 'mvn -Dtest=FirstTest test'
+ 
+            }
+       }
     }
    
-} */
+}  
 
 //Below is used to check the integration between jenkin and bitbucket
-pipeline {
+/*pipeline {
   agent any
   stages {
     stage('Checkout') {
@@ -55,4 +58,4 @@ pipeline {
       }
     }
   }
-}
+}*/
