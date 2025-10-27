@@ -27,8 +27,8 @@ pipeline {
        stage('Run Playwright Tests') {
            steps {
            //    bat 'mvn test'  //it will run all the program
-       	   //	 bat 'mvn -Dtest=FirstTest -Dheadless=false test'
-		 bat 'mvn -Dtest=FirstTest test'
+       	   	 bat 'mvn -Dtest=FirstTest -Dheadless=false test'
+	//	 bat 'mvn -Dtest=FirstTest test'
  
             }
        }
