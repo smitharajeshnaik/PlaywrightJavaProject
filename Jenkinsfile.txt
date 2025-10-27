@@ -9,7 +9,9 @@ pipeline {
     stages {
         stage('Launch Playwright Browser') {
             steps {
-                bat 'mvn exec:java -Dexec.mainClass="com.example.PlaywrightLauncher"'
+       
+                bat 'mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="open https://amazon.com -b chromium"'
+
             }
         }
     }
