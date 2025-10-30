@@ -30,7 +30,7 @@ pipeline {
            //    bat 'mvn test'  //it will run all the program
        	//   	 bat 'mvn -Dtest=FirstTest -Dheadless=false test'
 		 bat 'mvn -Dtest=FirstTest test'
-                 println "welcome Smitha.. Using webhook.. it should run automatically  - I am using Serveo"
+                 println "welcome Smitha.. Webhook-Serveo - Gereric webhook payload link"
  
             }
        }
