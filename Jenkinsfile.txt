@@ -7,11 +7,11 @@ pipeline {
     }
 
        stages {
-	stage ('CleanUp') {
-		steps{
-			echo "Cleaning"
-               }
-       }
+//	stage ('CleanUp') {
+//		steps{
+//			echo "Cleaning"
+  //             }
+  //     }
         stage('Checkout') {
             steps {
                 git credentialsId: 'Smitha_test_token_for_Jenkin_RWD', 
