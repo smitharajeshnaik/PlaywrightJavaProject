@@ -13,14 +13,6 @@ pipeline {
         	branch: 'Smitha_bitbucket_test'
             }
         }
-   //     stage('Debug Java Files') {
- //	 steps {
-    //		bat 'dir src\\main\\java /s'
-    	//	bat 'dir src\\test\\java /s'
-    //		bat 'type pom.xml'
-  //		}
-//	}
-
 
      stage('Build') {
           steps {
@@ -31,7 +23,8 @@ pipeline {
 
        stage('Run Playwright Tests') {
            steps {
-                 bat 'mvn test'  //it will run all the program
+       //          bat 'mvn test'  //it will run all the program
+bat 'mvn -Dtest=PlayWrightTest test'
                  println "welcome to Jenkins"
  
             }
