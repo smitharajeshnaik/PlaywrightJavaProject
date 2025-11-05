@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-05T15:32:49 IST" name="Default suite" finished-at="2025-11-05T15:32:49 IST" duration-ms="15">
+  <suite started-at="2025-11-05T15:38:46 IST" name="Default suite" finished-at="2025-11-05T15:38:52 IST" duration-ms="6100">
     <groups>
     </groups>
-    <test started-at="2025-11-05T15:32:49 IST" name="Default test" finished-at="2025-11-05T15:32:49 IST" duration-ms="15">
+    <test started-at="2025-11-05T15:38:46 IST" name="Default test" finished-at="2025-11-05T15:38:52 IST" duration-ms="6100">
+      <class name="tests.PlayWrightTest">
+        <test-method signature="verifyTitle()[pri:0, instance:tests.PlayWrightTest@564fabc8]" started-at="2025-11-05T15:38:46 IST" name="verifyTitle" finished-at="2025-11-05T15:38:52 IST" duration-ms="6033" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+      </class> <!-- tests.PlayWrightTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

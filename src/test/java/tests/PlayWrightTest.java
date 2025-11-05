@@ -9,7 +9,8 @@ import com.microsoft.playwright.Playwright;
 
 @Test
 public class PlayWrightTest {
-	 public static void main(String[] args) {
+	// public static void main(String[] args) {
+		public void verifyTitle() {
 		  Playwright playwright = Playwright.create();
 		 Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
 		  Page page = browser.newPage();
