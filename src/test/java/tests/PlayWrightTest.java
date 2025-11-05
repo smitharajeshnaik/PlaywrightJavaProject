@@ -1,11 +1,13 @@
 package tests;
 
+import org.testng.annotations.Test;
+
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 
-
+@Test
 public class PlayWrightTest {
 	 public static void main(String[] args) {
 		  Playwright playwright = Playwright.create();
