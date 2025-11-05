@@ -8,26 +8,18 @@ pipeline {
        stages {
         stage('Checkout') {
             steps {
-             //   git credentialsId: 'Smitha_test_token_for_Jenkin_RWD', 
-		git url: 'https://github.com/smitharajeshnaik/PlaywrightJavaProject.git',    
+                git credentialsId: 'Smitha_test_token_for_Jenkin_RWD', 
+		url: 'https://github.com/smitharajeshnaik/PlaywrightJavaProject.git',    
         	branch: 'Smitha_bitbucket_test'
             }
         }
-   //     stage('Debug Java Files') {
- //	 steps {
-    //		bat 'dir src\\main\\java /s'
-    	//	bat 'dir src\\test\\java /s'
-    //		bat 'type pom.xml'
-  //		}
-//	}
 
-
-     stage('Build') {
-          steps {
-	 	bat 'java -version'
-	        bat 'mvn clean install'
-           }
-     }
+     //   stage('Build') {
+      //      steps {
+	//	bat 'java -version'
+	//        bat 'mvn clean install'
+     //       }
+   //     }
 
        stage('Run Playwright Tests') {
            steps {

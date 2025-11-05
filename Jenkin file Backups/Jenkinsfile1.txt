@@ -1,0 +1,22 @@
+pipeline {
+  agent any
+  stages {
+    stage('Checkout') {
+      steps {
+        git credentialsId: 'Smitha_test_token_for_Jenkin_RWD', 
+        url: 'https://github.com/smitharajeshnaik/PlaywrightJavaProject.git',
+        branch: 'Smitha_bitbucket_test'
+      }
+    }
+    stage('Build') {
+      steps {
+        echo 'Building...'
+      }
+    }
+    stage('Test') {
+      steps {
+        echo 'Testing...'
+      }
+    }
+  }
+}

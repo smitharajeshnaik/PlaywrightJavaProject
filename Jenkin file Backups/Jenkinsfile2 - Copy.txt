@@ -1,0 +1,68 @@
+
+pipeline {
+    agent any
+    tools {
+        jdk 'JDK21'   
+        maven 'Maven_3.9.11' // Use the exact name from Jenkins config
+    }
+
+       stages {
+//	stage ('CleanUp') {
+//		steps{
+//			echo "Cleaning"
+  //             }
+  //     }
+        stage('Checkout') {
+            steps {
+                git credentialsId: 'Smitha_test_token_for_Jenkin_RWD', 
+		
+		//url: 'https://smitha_bitbucket-admin@bitbucket.org/smitha_bitbucket/playwrightjavaproject.git',   // bitbucket
+		url: 'https://github.com/smitharajeshnaik/PlaywrightJavaProject.git',    //github
+
+        	branch: 'Smitha_bitbucket_test'
+            }
+        }
+
+        stage('Build') {
+            steps {
+		bat 'java -version'
+	        bat 'mvn clean install'
+            }
+        }
+
+       stage('Run Playwright Tests') {
+           steps {
+           //    bat 'mvn test'  //it will run all the program
+       	//   	 bat 'mvn -Dtest=FirstTest -Dheadless=false test'
+		 bat 'mvn -Dtest=FirstTest test'
+                 println "welcome Smitha.. Webhook-Serveo - temporary payload link"
+ 
+            }
+       }
+    }
+   
+}   
+
+//Below is used to check the integration between jenkin and bitbucket
+/*pipeline {
+  agent any
+  stages {
+    stage('Checkout') {
+      steps {
+        git credentialsId: 'Smitha_test_token_for_Jenkin_RWD', 
+        url: 'https://github.com/smitharajeshnaik/PlaywrightJavaProject.git',
+        branch: 'Smitha_bitbucket_test'
+      }
+    }
+    stage('Build') {
+      steps {
+        echo 'Building...'
+      }
+    }
+    stage('Test') {
+      steps {
+        echo 'Testing...'
+      }
+    }
+  }
+}*/
